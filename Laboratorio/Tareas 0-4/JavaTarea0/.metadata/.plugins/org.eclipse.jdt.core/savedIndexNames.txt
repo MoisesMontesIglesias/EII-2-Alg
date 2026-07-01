@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+E:\2ºAño\2º cuatri\Algoritmia\Tarea\JavaTarea0\.metadata\.plugins\org.eclipse.jdt.core
+3340890521.index
+1865797976.index
+2671854391.index

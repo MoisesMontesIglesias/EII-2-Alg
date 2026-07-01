@@ -1,0 +1,58 @@
+package p11;
+
+import java.util.Random;
+
+public class Vector5 {
+	static int []v;
+	static int []w;
+
+	public static void main (String arg [] )
+	{
+		int n= Integer.parseInt(arg[0]);  //tamaño del problema leido de línea de comandos
+		v = new int [n] ;
+
+		//rellena (v);
+		//escribe (v);
+		int [] m = new int [2];
+		maximo (v,m);
+		System.out.println ("Valor del máximo del vector = "+ m[1]);
+		System.out.println ("Posición del máximo del vector = "+ m[0]);
+		}
+	
+	/** Este método da valores aleatorios a un vector de enteros, 
+    utiliza para ello la clase Random del paquete java.util  
+ **/
+public static void rellena (int[]a)
+{
+	Random r= new Random ();
+	int n= a.length;
+	for(int i=0;i<n;i++)
+		a[i]=r.nextInt (199)-99;//valores entre -99 y 99
+
+}  // fin de rellena   
+
+
+/** Escribe el contenido del vector que se le pasa  
+**/
+public static void escribe (int[]a)
+{
+	int n= a.length;
+	for (int i=0; i<n; i++ )
+		System.out.println ("Elemento "+i+" = "+a[i]);
+	System.out.println();
+
+}
+	
+	public static void maximo (int[]a, int[]m)
+	{
+		int n= a.length;
+		m[0]=0; 	// posición inicial
+		m[1]= a[0];	// primer elemento como referencia
+		for (int i=1;i<n;i++)
+			if (a[i]>m[1]) 
+			{
+				m[0]=i;
+				m[1]=a[i];
+			}
+		}  // fin de maximo
+}// fin de clase

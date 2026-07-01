@@ -1,0 +1,22 @@
+Bucle 1: O(n log n) --> la linea n1 = 3*n1 --> indica un log en base 3, pero se obvia la base
+Un O(n log n) es considerado lineal (casi lineal)
+
+Bucle 2: 3 bucles anidados --> O(n^2 log n) --> Casi cuadrática
+
+Bucle 3: Igual que bucle 2
+
+Bucle 4: O(n^3)
+
+Comandos en cmd:
+d: --> para cambiar de c,d,e
+ir al directorio y escribir esto:
+java -Djava.compiler=NONE p12.Bucle1 10000 (sin optimizacion)
+java p12.Bucle4 100 --> optimizacion
+
+
+
+
+
+
+
+

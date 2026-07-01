@@ -1,0 +1,61 @@
+package p11;
+
+import java.util.Random;
+
+public class Vector7 {
+	static int []v;
+	static int []w;
+
+	public static void main (String arg [] )
+	{
+		int n= Integer.parseInt(arg[0]);  //tamaño del problema leido de línea de comandos
+		v = new int [n] ;
+
+		rellena (v);
+		escribe (v);
+
+		int s=suma (v);
+		System.out.println ("Suma de los elementos del vector = "+ s);
+
+		int [] m = new int [2];
+		maximo (v,m);
+		System.out.println ("Valor del máximo del vector = "+ m[1]);
+		System.out.println ("Posición del máximo del vector = "+ m[0]);
+
+		w = new int [n] ;
+
+		rellena (w);
+		escribe (w);
+
+		int cont1=coincidencias1 (v,w);
+		System.out.println ("Número coincidencias por Algoritmo cuadrático= "+cont1);
+
+		int cont2=coincidencias2 (v,w);
+		System.out.println ("Número coincidencias por Algoritrmo lineal= "+cont2);
+
+		}
+	
+	/** Este método da valores aleatorios a un vector de enteros, 
+    utiliza para ello la clase Random del paquete java.util  
+ **/
+public static void rellena (int[]a)
+{
+	Random r= new Random ();
+	int n= a.length;
+	for(int i=0;i<n;i++)
+		a[i]=r.nextInt (199)-99;//valores entre -99 y 99
+
+}  // fin de rellena   
+
+
+/** Escribe el contenido del vector que se le pasa  
+**/
+public static void escribe (int[]a)
+{
+	int n= a.length;
+	for (int i=0; i<n; i++ )
+		System.out.println ("Elemento "+i+" = "+a[i]);
+	System.out.println();
+
+}
+}
